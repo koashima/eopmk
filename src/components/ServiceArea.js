@@ -1,21 +1,21 @@
 import React from "react";
-import heartIcon1 from "../images/heart-icon1.png";
-import heartIcon2 from "../images/heart-icon2.png";
-import heartIcon3 from "../images/heart-icon3.png";
-import heartIcon4 from "../images/heart-icon4.png";
-import heartIcon5 from "../images/heart-icon5.png";
-import heartIcon6 from "../images/heart-icon6.png";
-import heartIcon7 from "../images/heart-icon7.png";
-import heartIcon8 from "../images/heart-icon8.png";
-import heartIcon9 from "../images/heart-icon9.png";
-import heartIcon10 from "../images/heart-icon10.png";
-import heartIcon11 from "../images/heart-icon11.png";
+// import heartIcon1 from "../images/heart-icon1.png";
+// import heartIcon2 from "../images/heart-icon2.png";
+// import heartIcon3 from "../images/heart-icon3.png";
+// import heartIcon4 from "../images/heart-icon4.png";
+// import heartIcon5 from "../images/heart-icon5.png";
+// import heartIcon6 from "../images/heart-icon6.png";
+// import heartIcon7 from "../images/heart-icon7.png";
+// import heartIcon8 from "../images/heart-icon8.png";
+// import heartIcon9 from "../images/heart-icon9.png";
+// import heartIcon10 from "../images/heart-icon10.png";
+// import heartIcon11 from "../images/heart-icon11.png";
 import sectionIcon from "../images/section-icon.png";
 
 const ServiceArea = () => {
   return (
     <section className="service-area text-center">
-      <img src={heartIcon1} alt="" className="heart-icon heart-icon-1" />
+      {/* <img src={heartIcon1} alt="" className="heart-icon heart-icon-1" />
       <img src={heartIcon2} alt="" className="heart-icon heart-icon-2" />
       <img src={heartIcon3} alt="" className="heart-icon heart-icon-3" />
       <img src={heartIcon4} alt="" className="heart-icon heart-icon-4" />
@@ -25,7 +25,7 @@ const ServiceArea = () => {
       <img src={heartIcon8} alt="" className="heart-icon heart-icon-8" />
       <img src={heartIcon9} alt="" className="heart-icon heart-icon-9" />
       <img src={heartIcon10} alt="" className="heart-icon heart-icon-10" />
-      <img src={heartIcon11} alt="" className="heart-icon heart-icon-11" />
+      <img src={heartIcon11} alt="" className="heart-icon heart-icon-11" /> */}
 
       <div className="container">
         <div className="row">
@@ -34,7 +34,7 @@ const ServiceArea = () => {
               <div className="section-icon">
                 <img src={sectionIcon} alt="section-icon" />
               </div>
-              <h2 className="section__title">
+              <h2 className="section__title" style={{fontSize: "70px"}}>
                 Main Goals
               </h2>
               <p className="section__meta">help us now</p>
