@@ -1,55 +1,24 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { Fragment } from "react";
+import { Helmet } from "react-helmet";
+import favicon from "../images/favicon.png";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../assets/css/font-awesome.css";
+import "../assets/css/animate.min.css";
+import "../assets/css/fontello.css";
+import "../assets/css/style.css";
+import "../assets/css/responsive.css";
 
-import '../assets/scss/main.scss'
-import Header from './Header'
-import Menu from './Menu'
-import Contact from './Contact'
-import Footer from './Footer'
-
-class Layout extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            isMenuVisible: false,
-            loading: 'is-loading'
-        }
-        this.handleToggleMenu = this.handleToggleMenu.bind(this)
-    }
-
-    componentDidMount () {
-        this.timeoutId = setTimeout(() => {
-            this.setState({loading: ''});
-        }, 100);
-    }
-
-    componentWillUnmount () {
-        if (this.timeoutId) {
-            clearTimeout(this.timeoutId);
-        }
-    }
-
-    handleToggleMenu() {
-        this.setState({
-            isMenuVisible: !this.state.isMenuVisible
-        })
-    }
-
-    render() {
-        const { children } = this.props
-
-        return (
-            <div className={`body ${this.state.loading} ${this.state.isMenuVisible ? 'is-menu-visible' : ''}`}>
-                <div id="wrapper">
-                    <Header onToggleMenu={this.handleToggleMenu} />
-                    {children}
-                    <Contact />
-                    <Footer />
-                </div>
-                <Menu onToggleMenu={this.handleToggleMenu} />
-            </div>
-        )
-    }
-}
-
-export default Layout
+const Layout = props => {
+  return (
+    <Fragment>
+      <Helmet>
+        <title>{props.pageTitle}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="icon" href={favicon} />
+      </Helmet>
+      {props.children}
+    </Fragment>
+  );
+};
+export default Layout;
